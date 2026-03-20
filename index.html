@@ -211,16 +211,18 @@
             <div class="contact-form-panel">
               <form id="contactForm">
                 <div class="form-row">
-                  <input type="text" placeholder="Full Name" required />
-                  <input type="email" placeholder="Email Address" required />
+                  <input type="text" id="waName" placeholder="Full Name" required />
+                  <input type="email" id="waEmail" placeholder="Email Address" required />
                 </div>
-                <select>
-                  <option>Buying Interest</option>
-                  <option>Selling Interest</option>
-                  <option>Asset Management</option>
-                  <option>Investment Advisory</option>
+                <select id="waInterest" required>
+                  <option value="">Select Your Interest</option>
+                  <option value="Buying Interest">Buying Interest</option>
+                  <option value="Selling Interest">Selling Interest</option>
+                  <option value="Asset Management">Asset Management</option>
+                  <option value="Investment Advisory">Investment Advisory</option>
                 </select>
                 <textarea
+                  id="waMessage"
                   placeholder="Tell us about your requirements"
                   rows="4"
                 ></textarea>

@@ -36,14 +36,58 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Form Submit (Visual feedback)
+  // Contact Form Submit Handler
   const form = document.getElementById("contactForm");
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    // Get Form Data
+    const name = document.getElementById("waName").value;
+    const email = document.getElementById("waEmail").value;
+    const interest = document.getElementById("waInterest").value;
+    const message = document.getElementById("waMessage").value;
+
+    // Get current date and time
+    const now = new Date();
+    const dateTime = now.toLocaleString("en-IN", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+    });
+
+    // Format the WhatsApp Message
+    const text =
+      `*New Inquiry from Website*\n\n` +
+      `*Date & Time:* ${dateTime}\n` +
+      `*Name:* ${name}\n` +
+      `*Email:* ${email}\n` +
+      `*Interest:* ${interest}\n` +
+      `*Message:* ${message}`;
+
+    // Construct and Open WhatsApp URL
+    const phoneNumber = "917997298575";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      text
+    )}`;
+    window.open(whatsappUrl, "_blank");
+
+    // Provide Visual Feedback
     const btn = form.querySelector("button");
     btn.innerHTML = "Inquiry Sent!";
     btn.style.background = "#25d366";
+
+    // Reset Form
     form.reset();
+    
+    // Reset button after 2 seconds
+    setTimeout(() => {
+      btn.innerHTML = "Send Message";
+      btn.style.background = "";
+    }, 2000);
   });
 
   // Smooth Scroll for Nav Links
