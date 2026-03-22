@@ -1,274 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TARA VASA | Premium Real Estate & Investment</title>
     <link rel="icon" href="./logo/favicon.svg" type="image/svg+xml" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  </head>
-  <body>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
     <nav class="navbar">
-      <div class="container nav-container">
-        <!-- <a href="#" class="nav-logo">TARA<span>VASA</span></a> -->
-        <a href="#" class="nav-logo">
-          <img
-            src="./logo/Tara-Side-SVG.svg"
-            alt="Company Logo"
-            width="150"
-            height="auto"
-          />
-        </a>
+        <div class="container nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="./logo/Tara-Side-SVG.svg" alt="Tara Vasa Logo" width="150" height="auto" />
+            </a>
 
-        <ul class="nav-links">
-          <li><a href="#home" class="nav-item">Home</a></li>
-          <li><a href="#about" class="nav-item">About</a></li>
-          <li><a href="#services" class="nav-item">Services</a></li>
-          <li><a href="#contact" class="nav-item">Inquiry</a></li>
-        </ul>
-        <a href="https://wa.me/917997298575" class="btn btn-nav">Consult Now</a>
-      </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#services" class="nav-item">Services</a></li>
+                <li><a href="#contact" class="nav-item">Inquiry</a></li>
+                <li class="mobile-only"><a href="https://wa.me/917997298575" class="btn btn-gold">Consult Now</a></li>
+            </ul>
+            
+            <a href="https://wa.me/917997298575" class="btn btn-nav desktop-only">Consult Now</a>
+        </div>
     </nav>
 
     <main>
-      <!-- HERO SECTION -->
-      <section id="home" class="hero">
-        <div class="hero-image-wrapper">
-          <img
-            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2070"
-            alt="Luxury Interior"
-          />
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="container">
-          <div class="hero-content">
-            <span class="section-tag gold">Trusted Partner</span>
-            <h1>Your Trusted Partner in <br /><i>Premium Real Estate</i></h1>
-            <p>
-              Expert guidance for buying, selling, and strategic investments in
-              commercial and residential properties worldwide.
-            </p>
-            <div class="hero-btns">
-              <a href="#about" class="btn btn-gold">Explore Services</a>
-              <a href="#contact" class="btn btn-outline-white">Get in Touch</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT SECTION -->
-      <section id="about" class="section-padding bg-light">
-        <div class="container">
-          <div class="about-flex">
-            <div class="about-text">
-              <span class="section-tag navy">Our Philosophy</span>
-              <h2>Elevating the Standard <br />of Modern Living</h2>
-              <p class="lead">
-                We provide comprehensive, end-to-end real estate services
-                designed to meet the evolving needs of modern buyers and
-                investors.
-              </p>
-              <p>
-                From architectural design and styling to land parcel development
-                and plotting, our focus remains on
-                <strong
-                  >quality, transparency, and value-driven execution.</strong
-                >
-                We don't just facilitate transactions; we build lasting legacies
-                through tailored solutions.
-              </p>
-
-              <div class="feature-small">
-                <div class="f-item">
-                  <i class="fas fa-check"></i> Quality Focus
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="section-tag gold">Trusted Partner</span>
+                    <h1>Your Trusted Partner in <br /><i>Premium Real Estate</i></h1>
+                    <p>
+                        Expert guidance for buying, selling, and strategic investments in
+                        commercial and residential properties worldwide.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#about" class="btn btn-gold">Explore Services</a>
+                        <a href="#contact" class="btn btn-outline-navy">Get in Touch</a>
+                    </div>
                 </div>
-                <div class="f-item">
-                  <i class="fas fa-check"></i> Transparent Process
+                <div class="hero-image-container">
+                    <img id="hero-image" src="./assets/villa.jpg" alt="Luxury Architecture Illustration" />
                 </div>
-                <div class="f-item">
-                  <i class="fas fa-check"></i> Global Reach
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section-padding bg-light">
+            <div class="container">
+                <div class="about-flex">
+                    <div class="about-text">
+                        <span class="section-tag navy">Our Philosophy</span>
+                        <h2>Elevating the Standard <br />of Modern Living</h2>
+                        <p class="lead">
+                            We provide comprehensive, end-to-end real estate services
+                            designed to meet the evolving needs of modern buyers and
+                            investors.
+                        </p>
+                        <p>
+                            From architectural design and styling to land parcel development
+                            and plotting, our focus remains on
+                            <strong>quality, transparency, and value-driven execution.</strong>
+                            We don't just facilitate transactions; we build lasting legacies
+                            through tailored solutions.
+                        </p>
+
+                        <div class="feature-small">
+                            <div class="f-item"><i class="fas fa-check"></i> Quality Focus</div>
+                            <div class="f-item"><i class="fas fa-check"></i> Transparent Process</div>
+                            <div class="f-item"><i class="fas fa-check"></i> Global Reach</div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-reveal-wrapper">
+                            <img src="./assets/small-house.jpeg" alt="Modern Architecture Detail" />
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="about-image">
-              <div class="image-reveal-wrapper">
-                <img
-                  src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1000"
-                  alt="Modern Architecture"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- SERVICES SECTION -->
-      <section id="services" class="section-padding">
-        <div class="container">
-          <div class="section-header center">
-            <span class="section-tag gold">Expertise</span>
-            <h2>Bespoke Real Estate Solutions</h2>
-          </div>
-
-          <div class="services-grid">
-            <!-- Service 1 -->
-            <div class="service-card">
-              <div class="card-icon"><i class="fas fa-handshake"></i></div>
-              <h3>Sales & Acquisitions</h3>
-              <p>
-                We connect buyers and sellers, expertly handling negotiations,
-                permissions, and registrations to ensure a smooth, hassle-free
-                process—turning property dreams into reality.
-              </p>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="service-card">
-              <div class="card-icon">
-                <i class="fas fa-drafting-compass"></i>
-              </div>
-              <h3>Land & Architecture</h3>
-              <p>
-                Assistance with GP-approved plots, LRS/BRS permits, and
-                comprehensive architectural styling to create aesthetically
-                pleasing spaces aligned with your vision.
-              </p>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="service-card">
-              <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
-              <h3>Asset Management</h3>
-              <p>
-                A comprehensive approach to safeguard your assets, featuring
-                clear boundaries, secure compound walls, and gated
-                access—ensuring legal compliance and safety.
-              </p>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="service-card">
-              <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-              <h3>Wealth Advisory</h3>
-              <p>
-                Identify high-return opportunities and optimize your portfolio
-                with confidence—turning every property decision into a smart,
-                profitable move.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONCLUSION CTA -->
-      <section class="conclusion-cta">
-        <div class="container">
-          <div class="cta-box">
-            <div class="cta-content">
-              <h2>Your Dream Home, <br />Simplified.</h2>
-              <p>
-                We have partnered with the best brands and professionals to
-                ensure you get the best quality service. Our network is designed
-                to get rid of the footwork—everything is just a click away.
-              </p>
-              <p class="promise">
-                “We understand the value of your dream home and we promise to
-                give you a memorable one.”
-              </p>
-              <a href="#contact" class="btn btn-gold">Start Your Journey</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT SECTION -->
-      <section id="contact" class="section-padding">
-        <div class="container">
-          <div class="contact-wrapper">
-            <div class="contact-info-panel">
-              <span class="section-tag white">Connect</span>
-              <h2>Let’s Start a <br />Conversation</h2>
-              <div class="info-link">
-                <p>Direct Inquiries</p>
-                <a href="tel:+917997298575">+91 799 729 8575</a>
-              </div>
-              <div class="info-link">
-                <p>Email</p>
-                <a href="mailto:info@taravasa.com">info@taravasa.com</a>
-              </div>
-            </div>
-            <div class="contact-form-panel">
-              <form id="contactForm">
-                <div class="form-row">
-                  <input type="text" id="waName" placeholder="Full Name" required />
-                  <input type="email" id="waEmail" placeholder="Email Address" required />
+        <!-- SERVICES SECTION -->
+        <section id="services" class="section-padding">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="section-tag gold">Expertise</span>
+                    <h2>Bespoke Real Estate Solutions</h2>
                 </div>
-                <select id="waInterest" required>
-                  <option value="">Select Your Interest</option>
-                  <option value="Buying Interest">Buying Interest</option>
-                  <option value="Selling Interest">Selling Interest</option>
-                  <option value="Asset Management">Asset Management</option>
-                  <option value="Investment Advisory">Investment Advisory</option>
-                </select>
-                <textarea
-                  id="waMessage"
-                  placeholder="Tell us about your requirements"
-                  rows="4"
-                ></textarea>
-                <button type="submit" class="btn btn-navy full-width">
-                  Send Message
-                </button>
-              </form>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="card-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Sales & Acquisitions</h3>
+                        <p>We connect buyers and sellers, expertly handling negotiations, permissions, and registrations to ensure a smooth, hassle-free process.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <h3>Land & Architecture</h3>
+                        <p>Assistance with GP-approved plots, LRS/BRS permits, and comprehensive architectural styling to create spaces aligned with your vision.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3>Asset Management</h3>
+                        <p>A comprehensive approach to safeguard assets, featuring clear boundaries, compound walls, and secure gated access.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Wealth Advisory</h3>
+                        <p>Identify high-return opportunities and optimize your portfolio with confidence—turning every decision into a smart, profitable move.</p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <!-- CONCLUSION CTA -->
+        <section class="conclusion-cta">
+            <div class="container">
+                <div class="cta-box">
+                    <div class="cta-content">
+                        <h2>Your Dream Home, <br />Simplified.</h2>
+                        <p>
+                            We have partnered with the best brands and professionals to
+                            ensure you get the best quality service. Our network is designed
+                            to get rid of the footwork—everything is just a click away.
+                        </p>
+                        <p class="promise">
+                            “We understand the value of your dream home and we promise to
+                            give you a memorable one.”
+                        </p>
+                        <a href="#contact" class="btn btn-gold">Start Your Journey</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section-padding">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info-panel">
+                        <span class="section-tag white">Connect</span>
+                        <h2>Let’s Start a <br />Conversation</h2>
+                        <div class="info-link">
+                            <p>Direct Inquiries</p>
+                            <a href="tel:+917997298575">+91 799 729 8575</a>
+                        </div>
+                        <div class="info-link">
+                            <p>Email</p>
+                            <a href="mailto:taravasaco@gmail.com">taravasaco@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-form-panel">
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <input type="text" id="waName" placeholder="Full Name" required />
+                                <input type="email" id="waEmail" placeholder="Email Address" required />
+                            </div>
+                            <select id="waInterest" required>
+                                <option value="" disabled selected>Select Your Interest</option>
+                                <option value="Buying Interest">Buying Interest</option>
+                                <option value="Selling Interest">Selling Interest</option>
+                                <option value="Asset Management">Asset Management</option>
+                                <option value="Investment Advisory">Investment Advisory</option>
+                            </select>
+                            <textarea id="waMessage" placeholder="Tell us about your requirements" rows="4" required></textarea>
+                            <button type="submit" class="btn btn-navy full-width">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <div class="footer-top">
-          <!-- <div class="nav-logo">TARA<span>VASA</span></div> -->
-          <img
-            src="./logo/footer.svg"
-            alt="Company Logo"
-            width="300"
-            height="auto"
-          />
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-          </div>
+        <div class="container">
+            <div class="footer-top">
+                <img src="./logo/footer.svg" alt="Tara Vasa Footer Logo" width="220" height="auto" />
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tara Vasa Consulting. Elevating Real Estate Standards.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
-        <div class="footer-bottom">
-          <p>
-            &copy; 2026 Tara Vasa Consulting. Elevating Real Estate Standards.
-          </p>
-          <div class="legal-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-          </div>
-        </div>
-      </div>
     </footer>
 
     <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/917997298575" class="whatsapp-float" target="_blank">
-      <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/917997298575" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
-
-    <script src="script.js"></script>
-  </body>
+</body>
 </html>
